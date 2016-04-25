@@ -1,0 +1,76 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+    /*CUSTOM STYLES*/
+
+/*HOME PAGE*/
+body {
+    font-family: 'Courgette', cursive;
+    padding-top: 0px;
+    background-color: #283845;
+    background-image: url('Images/woodBackground.jpg');
+}
+div.page-header {
+    border-bottom:0px solid #eee;
+    margin-top:25px;
+}
+h1#homeTitle {
+    padding-right:0px;
+    padding-left:0px;
+    text-align:right;
+    background-color:transparent;
+    font-size:90px;
+    color:#EFDCD1;
+    margin-top:10px;
+    margin-bottom:0px;
+}
+a.thumbnail {
+    min-height:267px;
+    height:267px;
+    border-radius:9px;
+    border: 0px;
+    background-color:#6C5045;
+    position:relative;
+}
+a.thumbnail:hover {
+    background-color:gainsboro;
+}
+
+div.hoverText {
+    opacity:0;
+    margin-top:-200px;
+    margin-left:20px;
+    font-family: 'Courgette', cursive;
+    font-size: 90px;
+    color:antiquewhite;
+    position:relative;
+   text-decoration:none;
+}
+div.hoverText:hover {
+    visibility:visible;
+    opacity:1;
+    position:relative;
+    text-decoration:none;
+}

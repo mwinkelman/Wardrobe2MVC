@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Wardrobe2MVC.Models.Pants>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<br/>
+
+<p>
+    <br />
+    <br />
+    <br />
+    <br />
+    <button type="button" class="btn btn-default" id="addItemButton">@Html.ActionLink("Add New Pants", "Create")</button>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nickname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhotoURL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Color)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Season)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Occasion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nickname)
+        </td>
+        <td>
+            <img class="listImage" src="@Url.Content(item.PhotoURL)"/>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Color)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Season)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Occasion)
+        </td>
+        <td>
+            <div class="btn-group" role="group" aria-label="...">
+    <button type="button" class="btn btn-default">@Html.ActionLink("Edit", "Edit", new { id = item.PantID })</button>
+    <button type="button" class="btn btn-default">@Html.ActionLink("Details", "Details", new { id = item.PantID })</button>
+    <button type="button" class="btn btn-default">@Html.ActionLink("Delete", "Delete", new { id = item.PantID })</button>
+            </div>         
+        </td>
+    </tr>
+}
+
+</table>

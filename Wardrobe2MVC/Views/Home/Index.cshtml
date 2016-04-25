@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+
+}
+
+<body>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="page-header">
+                <h1 id="homeTitle">ClosetSpace</h1>
+            </div>
+        </div>
+        <div class="container" id="homeThumbnails">
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <a href='@Url.Action("Index", "Pants")' class="thumbnail">
+                        <div class="container" id="homePants" style="border-radius:6px; width:545px; height:259px; overflow:hidden; padding-left:0px; padding-right:0px;">
+                            <img class="pantsImage" src="~/Content/Images/PantsImage2.jpg" alt="alt" style="width:545px;" />                          
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <a href='@Url.Action("Index","Shirts")' class="thumbnail">
+                        <div class="container" id="homePants" style="border-radius:6px; width:545px; height:259px; overflow:hidden; padding-left:0px; padding-right:0px;">
+                            <img src="~/Content/Images/shirtsImage.jpg" alt="alt" style="width:545px" />
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <a href='@Url.Action("Index","Shoes")' class="thumbnail">
+                        <div class="container" style="border-radius:6px; width:545px; height:259px; overflow:hidden; padding-left:0px; padding-right:0px;">
+                            <img id="shoeImage" src="~/Content/Images/shoesImage2.jpg" alt="alt" style="width:545px;" />
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <a href='@Url.Action("Index","Accessories")' class="thumbnail">
+                        <div class="container" style="border-radius:6px; width:545px; height:259px; overflow:hidden; padding-left:0px; padding-right:0px;">
+                            <img src="~/Content/Images/accessoriesImage2.jpg" alt="alt" style="width:545px;" />
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
